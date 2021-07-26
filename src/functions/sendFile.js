@@ -1,9 +1,8 @@
-var router = require('express').Router()
 var fs = require('fs')
 
-router.get('/index.css', (req, res) =>
+let sendFile = (res, path) =>
 {
-    fs.readFile(`${__dirname}/index.css`, (err, data) =>
+    fs.readFile(path, (err, data) =>
     {
         if(err)
         {
@@ -12,6 +11,6 @@ router.get('/index.css', (req, res) =>
         }
         res.status(200).end(data)
     })
-})
+}
 
-module.exports = router
+module.exports = sendFile
