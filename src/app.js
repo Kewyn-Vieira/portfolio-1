@@ -26,7 +26,10 @@ app.use(function(req, res) {
     res.status(404).end('Page not found')
 })
 
-app.listen('8080', '0.0.0.0', () =>
+var host = require('os').networkInterfaces().Ethernet[1].address
+var port = '8080'
+
+app.listen(port, host, () =>
 {
-    console.log(`Listening on http://192.168.1.68:8080`)
+    console.log(`Listening on locally http://${host}:${port}`)
 })
