@@ -10,7 +10,7 @@ body
     overflow: hidden;
 
     color: var(--color-tertiary);
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', cursive;
     font-display: swap;
     background-color: var(--color-primary);
 }
