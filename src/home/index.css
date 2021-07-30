@@ -23,7 +23,7 @@ body
     align-items: center;
 }
 
-.hbs-logo
+.website-logo
 {
     max-height: calc(100vh - 128px);
     width: auto;
