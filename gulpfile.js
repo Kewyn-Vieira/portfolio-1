@@ -24,6 +24,7 @@ gulp.task('copyImgs', () =>
     .pipe(gulp.dest('dist'))
 })
 
+// Called by 'default', watches for changes and recompiles changed files
 gulp.task('watch', () =>
 {
     gulp.watch('./src/**/*.css', gulp.series('processCss'))
@@ -31,10 +32,12 @@ gulp.task('watch', () =>
     gulp.watch('./src/**/*.{gif,jpg,png,svg,ico}', gulp.series('copyImgs'))
 })
 
+// Called by 'default', runs once compiling everything at the start
 gulp.task('run', gulp.series([
     'processCss', 
     'processJs',
     'copyImgs'
 ]))
 
+// Called when you run gulp in the terminal
 gulp.task('default', gulp.parallel(['run', 'watch']))

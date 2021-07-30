@@ -1,5 +1,6 @@
 var fs = require('fs')
 
+// Sends file from $path and sends it as response
 let sendFile = (res, path) =>
 {
     fs.readFile(path, (err, data) =>
@@ -13,4 +14,5 @@ let sendFile = (res, path) =>
     })
 }
 
+// Export the function
 module.exports = sendFile
