@@ -17,7 +17,7 @@ body
     overflow: hidden;
 
     color: var(--color-tertiary);
-    font-family: 'Oswald', cursive;
+    font-family: fantasy;
     font-display: swap;
     background-color: var(--color-primary);
 }
