@@ -3,7 +3,7 @@ var functions = require('../functions')
 
 router.get('/', (req, res) =>
 {
-    res.status(200).render('./home', {layout: 'main'})
+    res.status(200).send('Work In Progress')
 })
 
 router.get('/index.css', (req, res) =>
