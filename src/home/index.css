@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-
 body
 {
     height: 100vh;
@@ -10,7 +8,7 @@ body
     overflow: hidden;
 
     color: var(--color-tertiary);
-    font-family: 'Quicksand', cursive;
+    font-family: monospace;
     font-display: swap;
     background-color: var(--color-primary);
 }
@@ -25,6 +23,6 @@ body
 
 .website-logo
 {
-    max-height: calc(100vh - 128px);
+    max-height: calc(100vh - 256px);
     width: auto;
 }
