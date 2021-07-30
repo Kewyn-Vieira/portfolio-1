@@ -3,7 +3,7 @@ var functions = require('../functions')
 
 router.get('/', (req, res) =>
 {
-    res.status(200).send('Work In Progress')
+    res.status(200).send("<p style='font-family: monospace'>Choose a template language and merge it with your branch to display your content.<p>")
 })
 
 router.get('/index.css', (req, res) =>
