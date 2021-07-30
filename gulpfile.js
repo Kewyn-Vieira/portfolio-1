@@ -2,7 +2,13 @@ var gulp = require('gulp')
 
 // processHtml
 var uglifyCss = require('gulp-uglifycss');
-
+gulp.task('processHtml', () =>
+{
+    return gulp
+    .src('./src/**/*.html')
+    .pipe(uglifyCss())
+    .pipe(gulp.dest('./dist'))
+})
 
 // processHandlebars
 
@@ -42,14 +48,15 @@ gulp.task('copyImgs', () =>
 gulp.task('watch', () =>
 {
     // html
+    gulp.watch('./src/**/*.html', gulp.series('processHtml'))
 
     // hbs
 
     // js
     gulp.watch('./src/**/*.js', gulp.series('processJs'))
-
+    
     // ts
-
+    
     // css
     gulp.watch('./src/**/*.css', gulp.series('processCss'))
 
@@ -62,6 +69,7 @@ gulp.task('watch', () =>
 // Called by 'default', runs once compiling everything at the start
 gulp.task('run', gulp.series([
     // html
+    'processHtml', 
 
     // hbs
 
