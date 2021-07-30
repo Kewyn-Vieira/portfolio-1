@@ -1,0 +1,16 @@
+$color-primary: #f0772b;
+$color-primary: #ffddaa;
+$color-primary: #382716;
+
+html
+{
+    --color-primary: #f0772b;
+    --color-secondary: #ffddaa;
+    --color-tertiary: #382716;
+}
+
+body
+{
+    width: auto;
+    margin: 0;
+}
