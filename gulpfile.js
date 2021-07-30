@@ -8,16 +8,17 @@ var uglifyCss = require('gulp-uglifycss');
 
 
 // processCss
-gulp.task('processCss', () =>
+
+
+// processSass
+var sass = require('gulp-sass')(require('sass'));
+gulp.task('processSass', () =>
 {
     return gulp.src(['./src/**/*.scss', '!./src/**/_*.scss'])
     .pipe(sass().on('error', sass.logError))
     .pipe(uglifyCss())
     .pipe(gulp.dest('./dist'))
 })
-
-// processSass
-var sass = require('gulp-sass')(require('sass'));
 
 // processJs
 var minifyJs = require('gulp-terser')
@@ -69,13 +70,14 @@ gulp.task('run', gulp.series([
 
     // js
     'processJs',
-
+    
     // ts
-
+    
     // css
     'processCss', 
-
+    
     // scss
+    'processSass', 
 
     // imgs
     'copyImgs'
