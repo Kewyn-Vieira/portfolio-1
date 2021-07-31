@@ -53,7 +53,6 @@ gulp.task('watch', () =>
     // ts
     
     // css
-    gulp.watch('./src/**/*.css', gulp.series('processCss'))
     
     // scss
     gulp.watch(['./src/**/*.scss', '!./src/**/_*.scss'], gulp.series('processSass'))
@@ -74,7 +73,6 @@ gulp.task('run', gulp.series([
     // ts
     
     // css
-    'processCss', 
     
     // scss
     'processSass', 
