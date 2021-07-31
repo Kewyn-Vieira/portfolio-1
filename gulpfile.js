@@ -1,7 +1,13 @@
 var gulp = require('gulp')
-var uglifyCss = require('gulp-uglifycss');
-const minifyJs = require('gulp-terser')
 
+// processHtml
+var uglifyCss = require('gulp-uglifycss');
+
+
+// processHandlebars
+
+
+// processCss
 gulp.task('processCss', () =>
 {
     return gulp
@@ -10,6 +16,10 @@ gulp.task('processCss', () =>
     .pipe(gulp.dest('./dist'))
 })
 
+// processSass
+
+// processJs
+var minifyJs = require('gulp-terser')
 gulp.task('processJs', () =>
 {
     return gulp
@@ -18,6 +28,10 @@ gulp.task('processJs', () =>
     .pipe(gulp.dest('dist'))
 })
 
+// processTs
+
+
+// copyImgs
 gulp.task('copyImgs', () =>
 {
     return gulp.src('./src/**/*.{gif,jpg,png,svg,ico}')
@@ -27,15 +41,41 @@ gulp.task('copyImgs', () =>
 // Called by 'default', watches for changes and recompiles changed files
 gulp.task('watch', () =>
 {
-    gulp.watch('./src/**/*.css', gulp.series('processCss'))
+    // html
+
+    // hbs
+
+    // js
     gulp.watch('./src/**/*.js', gulp.series('processJs'))
+
+    // ts
+
+    // css
+    gulp.watch('./src/**/*.css', gulp.series('processCss'))
+
+    // scss
+
+    // imgs
     gulp.watch('./src/**/*.{gif,jpg,png,svg,ico}', gulp.series('copyImgs'))
 })
 
 // Called by 'default', runs once compiling everything at the start
 gulp.task('run', gulp.series([
-    'processCss', 
+    // html
+
+    // hbs
+
+    // js
     'processJs',
+
+    // ts
+
+    // css
+    'processCss', 
+
+    // scss
+
+    // imgs
     'copyImgs'
 ]))
 
