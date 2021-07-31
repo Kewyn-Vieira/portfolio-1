@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",
+    "bootstrap": "^5.0.2",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
     "gulp-terser": "^2.0.1",

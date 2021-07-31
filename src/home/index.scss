@@ -1,5 +1,14 @@
 /* SCSS */
-@import '../globals';
+// Bootstrap
+    // Import everything from bootstrap with @import '../scss/bootstrap/index';
+
+    // Or import only what you will need
+
+    // You will always need this import when using bootstrap
+    @import '../scss/bootstrap/configuration/index';
+
+    // Import what you will need here
+    @import '../scss/bootstrap/components/buttons';
 
 /* Stylesheet Imports */
 @import '../partials/header/index';

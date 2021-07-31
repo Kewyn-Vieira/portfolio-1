@@ -1,0 +1,10 @@
+// If you are writing into a file you should pay attention to
+// the order of overriding and and importing
+// Read the docs at https://getbootstrap.com/docs/5.0/customize/sass/
+
+// Import every file from this folder
+// Write only in the imported files, not here
+@import './configuration/index';
+@import './components/index';
+@import 'helpers';
+@import './utilities/api';
