@@ -6,7 +6,11 @@ var functions = require('../functions')
 // In this case route = '/home', as it was set in app.js
 router.get('/', (req, res) =>
 {
+    // Without template
     res.status(200).send("<p style='font-family: monospace'>Choose a template language and merge it with your branch to display your content.<p>")
+
+    // With template
+    
 })
 
 // Send css file on root/route/index.css request
