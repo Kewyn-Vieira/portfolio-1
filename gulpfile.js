@@ -56,7 +56,7 @@ gulp.task('watch', () =>
     gulp.watch('./src/**/*.js', gulp.series('processJs'))
     
     // ts
-    
+
     // css
     gulp.watch('./src/**/*.css', gulp.series('processCss'))
 
