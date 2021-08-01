@@ -2,6 +2,9 @@
 var express = require('express')
 var app = express()
 
+// Template engine config
+
+
 // Redirect to /home on root
 app.get('/', (req, res) =>
 {
