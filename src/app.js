@@ -2,6 +2,23 @@
 var express = require('express')
 var app = express()
 
+// Get devMode variable
+var devMode
+
+for(let i = 0; i < process.argv.length; i++)
+{
+    if(process.argv[i].match('devMode'))
+    {
+        let str = process.argv[i]
+        let slice = str.slice(str.indexOf('=') + 1)
+        devMode = (slice === 'true')
+    }
+}
+
+// Connect livereload
+if(devMode)
+    app.use(require('connect-livereload')());
+
 // Template engine config
 
 

@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "npm-run-all -p build start-dev-server",
+    "dev": "npm-run-all -p build start-dev-server watch",
     "build": "gulp",
-    "start-dev-server": "nodemon dist/app.js -e js,hbs,css"
+    "start-dev-server": "nodemon dist/app.js -e html,css,js,hbs --devMode=true",
+    "watch": "livereload ./dist -e html,css,js,hbs"
   },
   "author": "Kewyn Ryan Vieira de Latorre",
   "license": "APACHE LICENSE, VERSION 2.0",
@@ -15,8 +16,10 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "connect-livereload": "^0.6.1",
     "gulp": "^4.0.2",
     "gulp-terser": "^2.0.1",
-    "gulp-uglifycss": "^1.1.0"
+    "gulp-uglifycss": "^1.1.0",
+    "livereload": "^0.9.3"
   }
 }
