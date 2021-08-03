@@ -30,12 +30,10 @@ app.get('/', (req, res) =>
 
 // Require routers
 var home = require('./home/router')
-var partials = require('./partials/router')
 
 // Use routers
 // Setting '/home' as a route and assigning home router to deal with requests
 app.use('/home', home)
-app.use('/partials', partials)
 
 // If no route is found send 404
 app.use(function(req, res) {
