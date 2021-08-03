@@ -1,0 +1,22 @@
+.page-footer
+{
+    background-color: skyblue;
+}
+
+.footer-div
+{
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-div p
+{
+    margin: 0;
+}
+
+.footer-text a
+{
+    color: black;
+}
