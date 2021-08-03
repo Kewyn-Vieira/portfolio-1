@@ -10,12 +10,10 @@
     // Import what you will need here
     @import '../scss/bootstrap/components/buttons';
 
-/* Stylesheet Imports */
 @import '../partials/header/index';
 @import '../partials/footer/index';
 
 /* Styles */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 body
 {
@@ -47,7 +45,3 @@ body
     width: auto;
     margin-bottom: 16px;
 }
-
-/* Importing here to avoid merge conflicts */
-@import url('/partials/header/index.css');
-@import url('/partials/footer/index.css');
