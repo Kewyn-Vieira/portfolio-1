@@ -3,69 +3,91 @@ This is a modular website template where you can just merge the branches that ha
 
 This template currently suports:
 
- - HTML
- - Handlebars
- - Javascript
- - Typescript
- - CSS
- - Sass - SCSS
+ - Template Engines
+	 - HTML
+	 - Handlebars
+ - Add-ons
+	 - Javascript
+	 - CSS
+	 - Typescript
+	 - Sass - SCSS
+ - Others
+	 - Bootstrap (included with CSS and SCSS)
 
-## How to start
+# How to start
 This template requires you to have [Node](https://nodejs.org/en/).
 
 To start you will need to clone the repository:
-	Open a terminal in your folder of choice and type 
+Open a terminal in your folder of choice and use:
+</br>
 	`$ git clone https://github.com/Kewyn-Vieira/website-template`
+</br>
 
 Choose the template type you will use and follow its instructions
 
-### HTML
-Open a terminal in the root folder
-`$ git rebase origin/HTML`
-This command will take you to the HTML branch. The HTML comes with Javascript and CSS by default.
+## HTML
+Open a terminal in the root folder and use:
+</br>
+	`$ git rebase origin/HTML`
+</br>
 
-#### Install Sass
-Open a terminal in the root folder
-`$ git merge origin/Sass`
+This command will install HTML to your template. The HTML template comes with Javascript and CSS by default.
+Before installing add-ons you should read [Add-ons](#add-ons)?
 
-#### Install Typescript
-Open a terminal in the root folder
-`$ git merge origin/Typescript -X rename-threshold=25`
+### Install Sass
+Open a terminal in the root folder and use:
+</br>
+	`$ git merge origin/Sass`
+</br>
 
-If you wish to install both Sass and Typescript, a conflict will happen. To solve it see section  **[Merge Conflicts](#id1)**.
-### Handlebars
-`$ git rebase origin/Handlebars`
-This command will take you to the HTML branch. The HTML comes with Javascript and CSS by default.
+### Install Typescript
+Open a terminal in the root folder and use the following command:
+</br>
+	`$ git merge origin/Typescript -X rename-threshold=25`
+</br>
 
-#### Install Sass
-Open a terminal in the root folder
-`$ git merge origin/Sass`
+## Handlebars
+Open a terminal in the root folder and use:
+</br>
+	`$ git rebase origin/Handlebars`
+</br>
 
-#### Install Typescript
-Open a terminal in the root folder
-`$ git merge origin/Typescript -X rename-threshold=25`
-`$ npm i --package-lock-only`
-`$ git add .`
-`$ git merge --continue`
-A text file will open. To finish installation just close it.
+This command will install Handlebars to your template. The Handlebars template comes with Javascript and CSS by default.
+Before installing add-ons you should read [Add-ons](#add-ons)?
+### Install Sass
+Open a terminal in the root folder and use:
+</br>
+	`$ git merge origin/Sass`
+</br>
 
-If you wish to install both Sass and Typescript, a conflict will happen. To solve it see section **[Merge Conflicts](#id1)**.
+### Install Typescript
+Open a terminal in the root folder and use the following command:
+</br>
+	`$ git merge origin/Typescript -X rename-threshold=25`
+</br>
 
-## Merge conflicts<a id="id1"></a>
+<a id='add-ons'>
 
-When merging branches conflicts between `package-lock.json` files might happen, but it's easy to solve them:
-`$ npm i --package-lock-only`
-`$ git add .`
-`$ git merge --continue`
-A text file will open. To finish installation just close it.
+# Add-ons
+The installation of the add-ons are obviously optional. Every template comes with CSS and Javascript by default. If you don't want any other add-ons, jump to [How to start developing](#start-developing).
 
-## How to start developing
+If you wish to install add-ons you should first open a terminal in the root folder and install [`npm-merge-driver`](https://www.npmjs.com/package/npm-merge-driver) to prevent merge conflicts between `package-lock.json` files, to accomplish this simply use:
+</br>
+	`$ npx npm-merge-driver install`
+</br>
+
+<a id='start-developing'>
+# How to start developing
 After switching to the branch with the template type you wish to work with and merging with all the branches you will use, you can start your development server doing the following:
 
-Install modules → Open a terminal in your root folder and type
-`$ npm i`
+Install modules → Open a terminal in your root folder and use:
+</br>
+	`$ npm i`
+</br>
 
-Start the server → After installing the modules, type 
-`$ npm run dev`
+Start the server → After installing the modules, use:
+</br>
+	`$ npm run dev`
+</br>
 
 Open the page → **Ctrl + Click** over the link given by the terminal
