@@ -19,9 +19,24 @@ router.get('/index.css', (req, res) =>
 })
 
 // Send logo.png on request
-router.get('/res/logo.png', (req, res) =>
+router.get('/res/coffee.png', (req, res) =>
 {
-    functions.sendFile(res, `${__dirname}/res/logo.png`)
+    functions.sendFile(res, `${__dirname}/res/coffee.png`)
+})
+
+router.get('/res/graph.png', (req, res) =>
+{
+    functions.sendFile(res, `${__dirname}/res/graph.png`)
+})
+
+router.get('/res/climate.png', (req, res) =>
+{
+    functions.sendFile(res, `${__dirname}/res/climate.png`)
+})
+
+router.get('/res/schedule.png', (req, res) =>
+{
+    functions.sendFile(res, `${__dirname}/res/schedule.png`)
 })
 
 // Export the router
