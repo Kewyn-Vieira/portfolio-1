@@ -2,3 +2,9 @@
 @import '../../../../node_modules/bootstrap/scss/buttons';
 
 // Then change styles here
+.btn-primary
+{
+    padding: 4px;
+    box-shadow: 0 8px 16px change-color($color: $primary, $alpha: 0.5);
+    border-radius: 8px;
+}
