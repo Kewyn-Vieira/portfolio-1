@@ -39,5 +39,15 @@ router.get('/res/schedule.png', (req, res) =>
     functions.sendFile(res, `${__dirname}/res/schedule.png`)
 })
 
+router.get('/res/bkgnd.png', (req, res) =>
+{
+    functions.sendFile(res, `${__dirname}/res/bkgnd.png`)
+})
+
+router.get('/res/bkgnd-card.png', (req, res) =>
+{
+    functions.sendFile(res, `${__dirname}/res/bkgnd-card.png`)
+})
+
 // Export the router
 module.exports = router
