@@ -22,8 +22,7 @@ h3{font-size:20px}
 
 .widget-card
 {
-    width: calc(300px - 32px);
-    height: calc(332px - 32px);
+    width: calc(314px - 32px);
     background-color: change-color($color: $primary, $red: 1%, $alpha: 0.4);
     overflow: hidden;
 
@@ -32,6 +31,7 @@ h3{font-size:20px}
 
 .widget-card#_0
 {
+    height: calc(332px - 32px);
     padding: 16px;
     display: flex;
     justify-content: space-between;
@@ -69,8 +69,94 @@ h3{font-size:20px}
     }
 }
 
+.widget-card#_1
+{
+    height: calc(332px - 32px);
+
+    background-color: transparent;
+    border-radius: 0;
+    $border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .widget-card-section#_0
+    {
+        padding: 8px;
+        background-color: #F6F8FF;
+        border-radius: $border-radius;
+
+        .img-div
+        {
+            display: flex;
+            justify-content: center;
+            .card-img{width: 90%}
+        }
+        span{white-space: nowrap;}
+
+        span#_0, span#_2 {font-weight: bold}
+        span#_1, span#_3
+        {
+            display: block;
+            font-size: 10px
+        }
+
+        .col#_1
+        {
+            text-align: right;
+        }
+    }
+
+    .widget-card-section#_1
+    {
+        display: flex;
+        justify-content: space-between;
+
+        .section-block
+        {
+            width: 134px;
+            height: 134px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: $border-radius;
+
+            span#_0{font-weight: 500}
+            span#_1{font-size: 10px}
+            .col-icon
+            {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .section-block#_0
+        {
+            border-radius: $border-radius;
+            background-color: #F6F8FF;
+
+            .col-icon
+            {
+                border-radius: 100%;
+                background-color: white;
+                color: $primary;
+                box-shadow: 0 8px 16px rgb(61 65 215 / 35%);
+            }
+        }
+        
+        .section-block#_1
+        {
+            background-color: $primary;
+            color: white;
+        }
+    }
+}
+
 .widget-card#_2
 {
+    height: calc(332px - 32px);
     padding: 24px;
 
     color: white;
@@ -111,17 +197,17 @@ h3{font-size:20px}
 
 .widget-card#_3
 {
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: transparent;
     border-radius: 0;
 
-    h3{margin: 0;}
+    h3{margin: 0}
 
     .social-media-btn-section
     {
-    
         span
         {
             display: block;
@@ -129,13 +215,13 @@ h3{font-size:20px}
             white-space: nowrap;
         }
         
-            button
-            {
-                font-size: 10px;
-                background-color: #F6FAFF;
-                border: 1px solid #B3B6DA;
-                border-radius: 32px;
-            }
+        button
+        {
+            font-size: 10px;
+            background-color: #F6FAFF;
+            border: 1px solid #B3B6DA;
+            border-radius: 32px;
+        }
     }
 
     .social-media
@@ -187,6 +273,72 @@ h3{font-size:20px}
         .social-media-notifications#_0 {color: #016F42;}
         .social-media-notifications#_1 {color: #f00;}
         .social-media-notifications#_2 {color: #6B46FF;}
+    }
+}
+
+.widget-card#_4
+{
+    height: 248px;
+}
+
+.widget-card#_5
+{
+    height: 248px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    background: url('/home/res/bkgnd-card.png'), linear-gradient(135deg, #FA93D2, #895FE0);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: right;
+
+    color: white;
+
+    span
+    {
+        width: min-content;
+        white-space: nowrap;
+    }
+
+    span#_0
+    {
+        font-size: 14px;
+    }
+
+    span#_1
+    {
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+    span#_2
+    {
+        font-size: 14px;
+    }
+
+    span#_3
+    {
+        font-size: 10px;
+    }
+
+    .widget-card-column
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .widget-card-footer
+    {
+        display: block;
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
     }
 }
 
