@@ -34,11 +34,6 @@ router.get('/res/climate.png', (req, res) =>
     functions.sendFile(res, `${__dirname}/res/climate.png`)
 })
 
-router.get('/res/schedule.png', (req, res) =>
-{
-    functions.sendFile(res, `${__dirname}/res/schedule.png`)
-})
-
 router.get('/res/bkgnd.png', (req, res) =>
 {
     functions.sendFile(res, `${__dirname}/res/bkgnd.png`)
