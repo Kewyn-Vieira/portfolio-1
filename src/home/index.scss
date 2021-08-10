@@ -11,16 +11,170 @@ body
 {
     height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
-
     font-display: swap;
-    background-color: var(--color-secondary);
+
+    main
+    {
+        height: 100%;
+
+        .container-fluid
+        {
+            height: 100%;
+        }
+    }
 }
 
 h3{font-size:20px}
+
+.page-menu
+{
+    width: 294px;
+    height: 100%;
+    padding: 32px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $primary;
+    color: #D3D3FD;
+
+    h3
+    {
+        text-align: center;
+
+        sup
+        {
+            font-size: 10px;
+            font-weight: 900;
+        }
+    }
+
+    .strip-active
+    {
+        position: relative;
+
+        &::after
+        {
+            content: "";
+            border: 8px solid #d3d3fd;
+            position: absolute;
+            left: -14px;
+            height: 100%;
+            border-radius: 8px / 4px;
+        }
+    }
+
+    .menu-strip
+    {
+        width: 88%;
+        padding: 4px 0;
+        margin: 4px 0;
+        padding-left: 16px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        
+        .strip-float-left
+        {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .strip-icon
+            {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+    
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            span#_0
+            {
+                font-size: 12px;
+            }
+        }
+
+        .strip-float-right
+        {
+            position: relative;
+            float: right;
+            
+            display: flex;
+            align-items: center;
+
+            .strip-notification
+            {
+                width: 16px;
+                height: 16px;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                font-size: 12px;
+                border-radius: 50%;
+                background-color: $danger;
+            }
+        }
+    }
+
+    .menu-section#_1
+    {
+        h4
+        {
+            font-size: 14px;
+            padding-left: 16px;
+        }
+    }
+
+    .menu-section#_2
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .btn
+        {
+            padding: 8px;
+            color: $primary;
+            background-color: white;
+
+            border-radius: 16px;
+        }
+
+        .btn#_0
+        {
+            width: 48px;
+            height: 48px;
+        }
+
+        .btn#_1
+        {
+            padding: 8px 48px !important;
+            font-weight: 500;
+        }
+
+        span#_0
+        {
+            padding: 16px;
+
+            a
+            {
+                color: white;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+    }
+}
 
 .widget-card
 {
