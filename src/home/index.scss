@@ -1,4 +1,6 @@
 /* SCSS */
+
+@use 'sass:math';
 // Bootstrap
     // Import everything from bootstrap with @import '../scss/bootstrap/index';
     @import '../scss/bootstrap/index';
@@ -23,7 +25,6 @@ h3{font-size:20px}
 .widget-card
 {
     width: calc(314px - 32px);
-    background-color: change-color($color: $primary, $red: 1%, $alpha: 0.4);
     overflow: hidden;
 
     border-radius: 16px;
@@ -73,7 +74,6 @@ h3{font-size:20px}
 {
     height: calc(332px - 32px);
 
-    background-color: transparent;
     border-radius: 0;
     $border-radius: 16px;
 
@@ -201,7 +201,6 @@ h3{font-size:20px}
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: transparent;
     border-radius: 0;
 
     h3{margin: 0}
@@ -279,6 +278,95 @@ h3{font-size:20px}
 .widget-card#_4
 {
     height: 248px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .round-div-wrapper
+    {
+        $border-width: 24px;
+        $size-circle: 196px;
+        $border-color: #FF8831;
+        
+        position: relative;
+
+        .circle-border-wrapper
+        {
+            $size: $size-circle + $border-width;
+
+            width: $size;
+            height: $size;
+
+            position: absolute;
+            top: math.div($border-width, -2);
+            left: math.div($border-width, -2);
+            transform: rotate(240deg);
+
+            .circle-border
+            {
+                width: $size;
+                $size: $size-circle + $border-width;
+                height: math.div($size, 2);
+
+                position: relative;
+        
+                border: solid $border-width $border-color;
+                border-width: $border-width $border-width 0 $border-width;
+                border-radius: 50% / 100% 100% 0 0;
+        
+                &::before
+                {
+                    content: '';
+        
+                    position: absolute;
+                    border: solid 1px $border-color;
+                    border-width: math.div($border-width, 2) math.div($border-width, 2) 0 math.div($border-width, 2);
+                    border-radius: 50% / 0 0 100% 100%;
+                    bottom: math.div($border-width, -2) + 1px;
+                    right: #{$border-width * -1};
+                }
+        
+                &::after
+                {
+                    content: '';
+        
+                    position: absolute;
+                    border: solid 1px $border-color;
+                    border-width: math.div($border-width, 2) math.div($border-width, 2) 0 math.div($border-width, 2);
+                    border-radius: 50% / 0 0 100% 100%;
+                    bottom: math.div($border-width, -2) + 1px;
+                    left: #{$border-width * -1};
+                }
+            }
+        }
+        
+    
+        .round-div
+        {
+            width: $size-circle;
+            height: $size-circle;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: white;
+            box-shadow: 0 0 20px 7px rgb(61 65 215 / 10%);
+            border-radius: 100%;
+    
+            span#_0
+            {
+                color: $primary;
+                font-size: 48px;
+                font-weight: 500;
+            }
+    
+            span#_1{font-size: 14px}
+        }
+    }
+
 }
 
 .widget-card#_5
