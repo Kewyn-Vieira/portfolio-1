@@ -34,9 +34,10 @@ router.get('/res/climate.png', (req, res) =>
     functions.sendFile(res, `${__dirname}/res/climate.png`)
 })
 
-router.get('/res/bkgnd.png', (req, res) =>
+router.get('/res/bkgnd.svg', (req, res) =>
 {
-    functions.sendFile(res, `${__dirname}/res/bkgnd.png`)
+    res.type('svg')
+    functions.sendFile(res, `${__dirname}/res/bkgnd.svg`)
 })
 
 router.get('/res/bkgnd-card.png', (req, res) =>
