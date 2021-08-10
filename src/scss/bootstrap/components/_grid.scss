@@ -2,3 +2,14 @@
 @import '../../../../node_modules/bootstrap/scss/grid';
 
 // Then change styles here
+.row
+{
+    padding: 0;
+    margin: 0;
+}
+
+.col
+{
+    padding: 0;
+    margin: 0;
+}
