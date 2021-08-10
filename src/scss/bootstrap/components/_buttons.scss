@@ -2,6 +2,13 @@
 @import '../../../../node_modules/bootstrap/scss/buttons';
 
 // Then change styles here
+.btn
+{
+    &:focus
+    {
+        box-shadow: none;
+    }
+}
 .btn-primary
 {
     padding: 4px;
