@@ -19,9 +19,10 @@ router.get('/index.css', (req, res) =>
 })
 
 // Send logo.png on request
-router.get('/res/coffee.png', (req, res) =>
+router.get('/res/coffee.svg', (req, res) =>
 {
-    functions.sendFile(res, `${__dirname}/res/coffee.png`)
+    res.type('svg')
+    functions.sendFile(res, `${__dirname}/res/coffee.svg`)
 })
 
 router.get('/res/graph.png', (req, res) =>
