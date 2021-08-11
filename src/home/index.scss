@@ -11,7 +11,10 @@ body
 {
     height: 100vh;
 
-    overflow: hidden;
+    @media only screen and (min-width: 832px)
+    {
+        overflow: hidden;
+    }
     font-display: swap;
 
     main
@@ -20,23 +23,35 @@ body
 
         .container-fluid
         {
-            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+
+            @media only screen and (min-width: 832px)
+            {
+                height: 100%;
+
+                flex-direction: row;
+            }
         }
     }
 }
 
 h3{font-size:20px}
 
+$menu-width: 224px;
+
 .page-menu
 {
-    width: 20%;
-    max-width: 256px;
-    height: 100%;
     padding: 32px 0;
-
+    
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
+    @media only screen and (min-width: 832px)
+    {
+        width: $menu-width;
+        height: 100%;
+    }
 
     background: url('/home/res/bkgnd.svg'), $primary;
     background-repeat: no-repeat;
@@ -57,126 +72,142 @@ h3{font-size:20px}
         }
     }
 
-    .strip-active
+    .menu-sections
     {
-        position: relative;
-
-        &::after
-        {
-            content: "";
-            border: 8px solid #d3d3fd;
-            position: absolute;
-            left: -14px;
-            height: 100%;
-            border-radius: 8px / 4px;
-        }
-    }
-
-    .menu-strip
-    {
-        width: 88%;
-        padding: 4px 0;
-        margin: 4px 0;
-        padding-left: 16px;
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        
-        .strip-float-left
-        {
-            height: 100%;
-            display: flex;
-            align-items: center;
-
-            .strip-icon
-            {
-                width: 24px;
-                height: 24px;
-                margin-right: 16px;
-    
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            span#_0
-            {
-                font-size: 12px;
-            }
-        }
-
-        .strip-float-right
-        {
-            position: relative;
-            float: right;
-            
-            display: flex;
-            align-items: center;
-
-            .strip-notification
-            {
-                width: 16px;
-                height: 16px;
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                
-                font-size: 12px;
-                border-radius: 50%;
-                background-color: $danger;
-            }
-        }
-    }
-
-    .menu-section#_1
-    {
-        h4
-        {
-            font-size: 14px;
-            padding-left: 16px;
-        }
-    }
-
-    .menu-section#_2
-    {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        justify-content: space-between;
 
-        .btn
+        @media only screen and (max-width: 832px)
         {
-            padding: 8px;
-            color: $primary;
-            background-color: white;
-
-            border-radius: 16px;
+            width: 100%;
+            height: unset;
+            flex-direction: row;
         }
 
-        .btn#_0
+        .strip-active
         {
-            width: 48px;
-            height: 48px;
-        }
-
-        .btn#_1
-        {
-            padding: 8px 24px !important;
-            font-weight: 500;
-        }
-
-        span#_0
-        {
-            padding: 16px;
-
-            a
+            position: relative;
+    
+            &::after
             {
-                color: white;
+                content: "";
+                border: 8px solid #d3d3fd;
+                position: absolute;
+                left: -14px;
+                height: 100%;
+                border-radius: 8px / 4px;
+            }
+        }
+    
+        .menu-strip
+        {
+            width: 88%;
+            padding: 4px 0;
+            margin: 4px 0;
+            padding-left: 16px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            
+            .strip-float-left
+            {
+                height: 100%;
+                display: flex;
+                align-items: center;
+    
+                .strip-icon
+                {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 16px;
+        
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                span#_0
+                {
+                    font-size: 12px;
+                }
+            }
+    
+            .strip-float-right
+            {
+                position: relative;
+                float: right;
+                margin-left: 16px;
+                
+                display: flex;
+                align-items: center;
+    
+                .strip-notification
+                {
+                    width: 16px;
+                    height: 16px;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    font-size: 12px;
+                    border-radius: 50%;
+                    background-color: $danger;
+                }
+            }
+        }
+    
+        .menu-section#_1
+        {
+            h4
+            {
+                font-size: 14px;
+                padding-left: 16px;
+            }
+        }
+    
+        .menu-section#_2
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+    
+            .btn
+            {
+                padding: 8px;
+                color: $primary;
+                background-color: white;
+    
+                border-radius: 16px;
+            }
+    
+            .btn#_0
+            {
+                width: 48px;
+                height: 48px;
+            }
+    
+            .btn#_1
+            {
+                padding: 8px 24px !important;
                 font-weight: 500;
-                text-decoration: none;
+            }
+    
+            span#_0
+            {
+                padding: 16px;
+    
+                a
+                {
+                    color: white;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -184,7 +215,10 @@ h3{font-size:20px}
 
 .main-div
 {
-    width: 76%;
+    @media only screen and (min-width: 832px)
+    {
+        width: calc(100% - #{$menu-width});
+    }
     padding: 16px;
 
     display: flex;
@@ -194,6 +228,8 @@ h3{font-size:20px}
     .header-div
     {
         width: 100%;
+
+        @media only screen and (max-width: 832px){margin-bottom: 32px}
 
         .float-left-div
         {
@@ -253,14 +289,31 @@ h3{font-size:20px}
         display: flex;
         justify-content: space-between;
 
+        
         .widget-slot
         {
             width: 30%;
+            max-width: 256px;
             height: 100%;
-
+            
             display: flex;
             align-items: flex-end;
             flex: unset;
+        }
+
+        @media only screen and (max-width: 832px)
+        {
+            flex-direction: column;
+
+            .widget-slot
+            {
+                width: 256px;
+                height: 256px;
+                margin-bottom: 32px
+            }
+            .widget-slot#_0, .widget-slot#_3{align-self: center}
+            .widget-slot#_1, .widget-slot#_4{align-self: center}
+            .widget-slot#_2, .widget-slot#_5{align-self: center}
         }
     }
 }
@@ -351,6 +404,11 @@ h3{font-size:20px}
         {
             display: block;
             font-size: 10px
+        }
+
+        .row>*
+        {
+            width: unset;
         }
 
         .col#_1{text-align: right}
