@@ -3,8 +3,16 @@
 @use 'sass:math';
 // Bootstrap
     // Import everything from bootstrap with @import '../scss/bootstrap/index';
-    @import '../scss/bootstrap/index';
-
+ 
+    @import '../scss/bootstrap/configuration/index';
+    
+    @import "../scss/bootstrap/components/root";
+    @import "../scss/bootstrap/components/reboot";
+    @import "../scss/bootstrap/components/type";
+    @import "../scss/bootstrap/components/containers";
+    @import "../scss/bootstrap/components/buttons";
+    @import "../scss/bootstrap/utilities/api";
+ 
 /* Styles */
 
 body
