@@ -425,25 +425,23 @@ $menu-width: 224px;
     .widget-card-section#_1
     {
         display: flex;
+        height: max-content;
         justify-content: space-between;
 
         .section-block
         {
             width: 45%;
-            height: 100%;
+            padding: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-radius: $border-radius;
 
+            span{white-space: nowrap}
             span#_0{font-weight: 500}
             span#_1{font-size: 10px}
-            .col-icon
-            {
-                padding: 8px;
-                margin-bottom: 8px;
-            }
+            .col-icon{margin-bottom: 4px}
         }
 
         .section-block#_0
@@ -453,6 +451,7 @@ $menu-width: 224px;
 
             .col-icon
             {
+                padding: 4px;
                 border-radius: 100%;
                 background-color: white;
                 color: $primary;
