@@ -267,8 +267,6 @@ h3{font-size:20px}
 .widget-card
 {
     width: 100%;
-    overflow: hidden;
-
     border-radius: 16px;
 }
 
@@ -532,31 +530,37 @@ h3{font-size:20px}
 
     .round-div-wrapper
     {
-        $border-width: 24px;
-        $size-circle: 196px;
+        $border-width: 16px;
+        $size: 66%;
         $border-color: #FF8831;
         
+        width: 100%;
+
         position: relative;
+        left: calc((100% - #{$size} - #{$border-width})/2);
 
         .circle-border-wrapper
         {
-            $size: $size-circle + $border-width;
+            width: calc(#{$size} + #{$border-width});
 
-            width: $size;
-            height: $size;
+            &::after
+            {
+                content:'';
+                padding-bottom: 100%;
+                display: block;
+            }
 
             position: absolute;
-            top: math.div($border-width, -2);
-            left: math.div($border-width, -2);
+            top: #{$border-width * -0.5};
+            left: #{$border-width * -0.5};
             transform: rotate(240deg);
 
             .circle-border
             {
-                width: $size;
-                $size: $size-circle + $border-width;
-                height: math.div($size, 2);
+                width: 100%;
+                height: 50%;
 
-                position: relative;
+                position: absolute;
         
                 border: solid $border-width $border-color;
                 border-width: $border-width $border-width 0 $border-width;
@@ -590,26 +594,37 @@ h3{font-size:20px}
     
         .round-div
         {
-            width: $size-circle;
-            height: $size-circle;
+            width: $size;
+            &::after
+            {
+                content: '';
+                padding-bottom: 100%;
+                display: block;
+            }
     
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             
             background-color: white;
             box-shadow: 0 0 20px 7px rgb(61 65 215 / 10%);
             border-radius: 100%;
-    
-            span#_0
+            
+            .round-div-content
             {
-                color: $primary;
-                font-size: 48px;
-                font-weight: 500;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                span#_0
+                {
+                    color: $primary;
+                    font-size: 48px;
+                    font-weight: 500;
+                }
+                span#_1{font-size: 14px}
             }
-    
-            span#_1{font-size: 14px}
         }
     }
 
