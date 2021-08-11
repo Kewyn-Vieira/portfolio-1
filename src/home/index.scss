@@ -18,10 +18,13 @@
 body
 {
     height: 100vh;
-
-    @media only screen and (min-width: 832px)
+    overflow: hidden;
+    
+    @media only screen and (max-width: 832px)
     {
-        overflow: hidden;
+        width: fit-content;
+        min-width: 100%;
+        overflow: unset;
     }
     font-display: swap;
 
