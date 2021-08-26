@@ -296,6 +296,9 @@ $menu-width: 224px;
 
     .widget-row
     {
+        max-width: 740px;
+        margin: 0 auto;
+        width: -webkit-fill-available;
         height: 40%;
         display: flex;
         justify-content: space-between;
