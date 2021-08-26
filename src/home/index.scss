@@ -64,7 +64,7 @@ $menu-width: 224px;
         height: 100%;
     }
 
-    background: url('/home/res/bkgnd.svg'), $primary;
+    background: url('res/bkgnd.svg'), $primary;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: bottom;
@@ -483,7 +483,7 @@ $menu-width: 224px;
 
     position: relative;
     
-    background-image: url('/home/res/climate.png');
+    background-image: url('res/climate.png');
     color: white;
     background-position: bottom;
 
@@ -713,7 +713,7 @@ $menu-width: 224px;
 
     position: relative;
 
-    background: url('/home/res/bkgnd-card.png'), linear-gradient(135deg, #FA93D2, #895FE0);
+    background: url('res/bkgnd-card.png'), linear-gradient(135deg, #FA93D2, #895FE0);
     background-repeat: no-repeat;
     background-position-y: bottom;
     background-position-x: right;
