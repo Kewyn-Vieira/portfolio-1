@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/app.js",
-    "dev": "npm-run-all -p build start-dev-server watch",
+    "dev": "npm-run-all -p build start-dev-server watch gulp-watch",
     "build": "gulp run",
     "start-dev-server": "nodemon dist/app.js -e html,css,js,hbs --devMode=true",
+    "gulp-watch": "gulp",
     "watch": "livereload ./dist -e html,css,js,hbs"
   },
   "author": "Kewyn Ryan Vieira de Latorre",
